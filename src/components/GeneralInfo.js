@@ -17,7 +17,7 @@ const handleSubmit = (e) => {
 
   return (
     <div className="general-wrapper">
-      <form class="general-form" onSubmit={handleSubmit}>
+      <form className="general-form" onSubmit={handleSubmit}>
         <label>Name: 
           <input type="text" placeholder='Name' onChange={(e) => setName(e.target.value)} value={name}></input>
         </label>
