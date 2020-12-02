@@ -17,7 +17,6 @@ class EducationSection extends Component {
   }
 
   handleChange(e) {
-    console.log("change");
     this.setState(() => {
       return {[e.target.name]: e.target.value}
     })
