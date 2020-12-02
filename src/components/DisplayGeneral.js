@@ -6,9 +6,18 @@ const DisplayGeneral = (props) => {
     <div className="general-display">
       <p>{name}</p>
       <p>{email}</p>
-      <p>{phone}</p>
+      <p>{phone ? formatPhone(phone) : ''}</p>
     </div>
   )
+}
+
+const formatPhone = (phone) => {
+  const phoneArray = phone.replace('-', '').split('');
+  const countryCode = phoneArray.length === 11 ? `${phoneArray[0]} ` : '';
+  const lastFour = phoneArray.splice(phoneArray.length - 4, 4).join('');
+  const midThree = phoneArray.splice(phoneArray.length - 3, 3).join('');
+  const firstThree = phoneArray.splice(phoneArray.length - 3, 3).join('');
+  return `${countryCode}(${firstThree}) ${midThree}-${lastFour}`;
 }
 
 export default DisplayGeneral;

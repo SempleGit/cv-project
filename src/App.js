@@ -1,12 +1,12 @@
 import './App.css';
-import GeneralInfo from './components/GeneralInfo';
-import EducationInput from './components/EducationInput';
+import GeneralSection from './components/GeneralSection';
+import EducationSection from './components/EducationSection';
 
 function App() {
   return (
     <div className="App">
-      <GeneralInfo />
-      <EducationInput />
+      <GeneralSection />
+      <EducationSection />
     </div>
   );
 }

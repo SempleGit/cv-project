@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import EducationInputs from './EducationInputs';
 import DisplayEducation from './DisplayEducation';
 
-class EducationInput extends Component {
+
+class EducationSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +17,8 @@ class EducationInput extends Component {
   }
 
   handleChange(e) {
-    this.setState((state) => {
+    console.log("change");
+    this.setState(() => {
       return {[e.target.name]: e.target.value}
     })
   }
@@ -40,24 +43,11 @@ class EducationInput extends Component {
   render() {
     return (
       <section className="education-section-wrapper">
-        <form className="education-form" onSubmit={this.handleSubmit}>
-          <label>School:
-            <input type="text" name="school" onChange={this.handleChange} value={this.state.school}></input>
-          </label>
-          <label>Major:
-            <input type="text" name="major" onChange={this.handleChange} value={this.state.major}></input>
-          </label>
-          <label>Graduation Date: 
-            <input type="text" name="graduationDate" onChange={this.handleChange} value={this.state.graduationDate}></input>
-          </label>
-          <div className="submit-div">
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
+        <EducationInputs onSubmit={this.handleSubmit} onChange={this.handleChange} parameters={this.state} />
         <DisplayEducation formData={this.state.formData} />
       </section>
     )
   }
 }
 
-export default EducationInput;
+export default EducationSection;
