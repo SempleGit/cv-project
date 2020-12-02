@@ -1,11 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .general-wrapper, .education-section-wrapper {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 2fr;
-
 }
 
-.general-formm, education-form {
+.general-form, .education-form {
   background-color: #99D5C9;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
