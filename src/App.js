@@ -1,12 +1,15 @@
 import './App.css';
-import GeneralSection from './components/GeneralSection';
-import EducationSection from './components/EducationSection';
+import GeneralSection from './components/General/GeneralSection';
+import EducationSection from './components/Education/EducationSection';
+import ExperienceSection from './components/Experience/ExperienceSection';
 
 function App() {
+  
   return (
     <div className="App">
       <GeneralSection />
       <EducationSection />
+      <ExperienceSection />
     </div>
   );
 }

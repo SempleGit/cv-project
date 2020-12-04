@@ -12,17 +12,13 @@ class EducationSection extends Component {
       graduationDate: '',
       formData: {}
     }
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e) {
-    this.setState(() => {
-      return {[e.target.name]: e.target.value}
-    })
+  handleChange = (e) => {
+    this.setState(() => ({[e.target.name]: e.target.value}))
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.setState((state) => (
         {
@@ -41,7 +37,7 @@ class EducationSection extends Component {
 
   render() {
     return (
-      <section className="education-section-wrapper">
+      <section className="section-wrapper">
         <EducationInputs onSubmit={this.handleSubmit} onChange={this.handleChange} parameters={this.state} />
         <DisplayEducation formData={this.state.formData} />
       </section>

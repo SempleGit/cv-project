@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DisplayEducation = (props) => {
-  const {school, major, graduationDate} = props.formData;
+  const {formData: {school, major, graduationDate}} = props;
   return (
     <div className="general-display">
       <p>{school}</p>

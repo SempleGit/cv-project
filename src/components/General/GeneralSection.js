@@ -7,20 +7,22 @@ const GeneralSection = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [formData, setForm] = useState({});
+  const [showInputs, displayInputs] = useState(true);
   
 const handleSubmit = (e) => {
   e.preventDefault();
   setForm({name: name, email: email, phone: phone});
+  // displayInputs(!showInputs)
   setName('');
   setPhone('');
   setEmail('');
 }
 
   return (
-    <div className="general-wrapper">
-      <GeneralInputs parameters={ {name, email, phone, setName, setEmail, setPhone, handleSubmit} } />
+    <section className="section-wrapper">
+      {showInputs && <GeneralInputs parameters={ {name, email, phone, setName, setEmail, setPhone, handleSubmit} } />}
       <DisplayGeneral formData={formData} />
-    </div>
+    </section>
   )
 }
 
