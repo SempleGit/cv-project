@@ -4,7 +4,7 @@ import EducationSection from './components/Education/EducationSection';
 import ExperienceSection from './components/Experience/ExperienceSection';
 
 function App() {
-  
+
   return (
     <div className="App">
       <GeneralSection />

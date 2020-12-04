@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DisplayExperience = (props) => {
-  const {formData: {jobTitle, duties, startDate, endDate}} = props;
+  const {jobTitle, duties, startDate, endDate} = props.formData;  
   return (
     <div className="general-display">
       <p>{jobTitle}</p>
@@ -12,4 +12,4 @@ const DisplayExperience = (props) => {
   )
 }
 
-export default DisplayExperience;
+export default DisplayExperience;   
