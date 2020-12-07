@@ -8,7 +8,7 @@ const ExperienceInputs = (props) => {
               <input type="text" name="jobTitle" onChange={onChange} value={jobTitle}></input>
             </label>
             <label>Duties:
-              <input type="text" name="duties" onChange={onChange} value={duties}></input>
+              <textarea rows="8" type="text" name="duties" onChange={onChange} value={duties}></textarea>
             </label>
             <label>Start Date: 
               <input type="text" name="startDate" onChange={onChange} value={startDate}></input>

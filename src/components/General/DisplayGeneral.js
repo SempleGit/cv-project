@@ -4,6 +4,7 @@ const DisplayGeneral = (props) => {
   const {name, email, phone} = props.formData;
   return (
     <div className="general-display">
+      <h2 className="section-header">Contact Information</h2>
       <p>{name}</p>
       <p>{email}</p>
       <p>{phone ? formatPhone(phone) : ''}</p>

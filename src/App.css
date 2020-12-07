@@ -6,6 +6,7 @@ html {
   box-sizing: inherit;
 }
 
+
 .App {
   display: grid;
   gap: 10px;
@@ -17,6 +18,11 @@ html {
   grid-template-columns: 1fr 3fr 1fr;
 }
 
+.section-header { 
+  color: white;
+  background-color: #271033;
+}
+
 .general-form, .education-form, .experience-form {
   background-color: #99D5C9;
   display: grid;
@@ -24,8 +30,14 @@ html {
 }
 
 .general-display {
-  background-color: #cdb9f8;
+  background-color: #adafd6;
   padding: 10px;
+}
+
+.job-display {
+  background-color: #F4FAFF;
+  border: 4px inset gray;
+
 }
 
 .submit-div {
@@ -36,8 +48,11 @@ label {
   padding: 5px;
 }
 
-input[type="text"], input[type="tel"], input[type="email"]  {
+input[type="text"], input[type="tel"], input[type="email"], textarea  {
+  font-family: sans-serif;
+  font-size: 1rem;
   padding: 5px;
+  resize: none;
   width: 100%;
 }
 
@@ -49,4 +64,8 @@ input[type=submit] {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+li {
+  list-style-type: none;
 }
