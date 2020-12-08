@@ -16,19 +16,16 @@ class ExperienceSection extends Component {
     };
   }
 
-  deleteItem = (e) => {
+  deleteItem = (deleteId) => {
     let formCopy = [...this.state.formData];
-    this.setState({formData: formCopy.filter( ({id}) => id !== e.target.id)});
+    this.setState({formData: formCopy.filter( ({id}) => id !== deleteId)});
   } 
 
-  editItem = (e) => {
-    const editRef = this.state.formData.find( ({id}) => id === e.target.id);
+  editItem = (editId) => {
+    const editRef = this.state.formData.find( ({id}) => id === editId);
     this.setState(editRef);
   } 
 
-  updateItem = (item, index) => {
-
-  }
   handleChange = (e) => {
     this.setState(() => ({[e.target.name]: e.target.value}))
   }

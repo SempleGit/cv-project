@@ -5,9 +5,11 @@ const DisplayGeneral = (props) => {
   return (
     <div className="general-display">
       <h2 className="section-header">Contact Information</h2>
-      <p>{name}</p>
-      <p>{email}</p>
-      <p>{phone ? formatPhone(phone) : ''}</p>
+      {name && <div className="item-display">
+        <p>{name}</p>
+        <p>{email}</p>
+        <p>{phone ? formatPhone(phone) : ''}</p>
+      </div>}
     </div>
   )
 }

@@ -6,7 +6,7 @@ import ExperienceSection from './components/Experience/ExperienceSection';
 function App() {
 
   return (
-    <div className="App">
+    <div className="container App">
       <GeneralSection />
       <EducationSection />
       <ExperienceSection />
