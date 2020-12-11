@@ -10,14 +10,18 @@ html {
   box-sizing: inherit;
 }
 
-p, ul, li {
-  margin: .5rem;
+h4, p, ul, li {
+  margin: .5rem 1rem;
+}
+
+.employer {
+  text-decoration: underline;
 }
 
 .App {
   display: grid;
-  gap: .75rem;
-  padding: .75rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .section-wrapper {
@@ -30,15 +34,16 @@ p, ul, li {
   color: white;
   background-color: #271033;
   border: gray 4px outset;
+  font-size: 1.5rem;
   margin: 0;
-  padding: .5rem;
+  padding: 1rem;
 }
 
 .general-form, .education-form, .experience-form {
   align-content: flex-start;
   background-color: #99D5C9;
   display: grid;
-  padding: .5rem;;
+  padding: 1rem;;
 }
 
 .general-display {

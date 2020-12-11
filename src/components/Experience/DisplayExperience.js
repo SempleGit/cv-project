@@ -2,8 +2,9 @@ import React from 'react';
 
 const DisplayExperience = (props) => {
   
-  const experienceList = props.formData.map(({jobTitle, duties, startDate, endDate, id}) => (
+  const experienceList = props.formData.map(({employer, jobTitle, duties, startDate, endDate, id}) => (
         <div className="item-display" key={id}>
+            <h4 className="employer">{employer}</h4>
             <p>{jobTitle}</p>
             <p>{startDate} - {endDate}</p> 
             <p>Job Description:</p>

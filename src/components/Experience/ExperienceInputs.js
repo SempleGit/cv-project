@@ -1,9 +1,12 @@
 import React from 'react';
 
 const ExperienceInputs = (props) => {
-  const { onChange, onSubmit, parameters: { jobTitle, duties, startDate, endDate } } = props;
+  const { onChange, onSubmit, parameters: { employer, jobTitle, duties, startDate, endDate } } = props;
   return (
           <form className="experience-form" onSubmit={onSubmit}>
+            <label>Employer:
+              <input type="text" name="employer" onChange={onChange} value={employer}></input>
+            </label>
             <label>Job Title:
               <input type="text" name="jobTitle" onChange={onChange} value={jobTitle}></input>
             </label>
