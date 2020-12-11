@@ -12,7 +12,21 @@ class ExperienceSection extends Component {
       startDate: '',
       endDate: '',    
       id: '',
-      formData: []
+      formData: [{
+        jobTitle: 'Jurassic Park',
+        duties: `Acted as a dinosaur expert for the park. Reviewed park safety precautions and types of dinosaurs. When the dinosaurs escaped from captivity assisted in saving the children and blowing up the island.`,
+        startDate: 'Mar 1993',
+        endDate: 'Apr 1993',    
+        id: 'default1',
+      },
+      {
+        jobTitle: 'Jurassic Park II',
+        duties: `Without any other paleoentologists available, was taken as a captive dinosaur expert. Main functions include searching for some lost hiker named Eric, who elected to go hiking on a dinosaur infested island.`,
+        startDate: 'July 1995',
+        endDate: 'Aug 1995',    
+        id: 'default2',
+      }
+    ]
     };
   }
 

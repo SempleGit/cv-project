@@ -11,7 +11,12 @@ class EducationSection extends Component {
       school: '',
       major: '',
       graduationDate: '',
-      formData: []
+      formData: [{
+        school: 'University of Montana',
+        major: 'Geology and Zoology',
+        graduationDate: 'May 1986',
+        id: 'defaultEdu '
+      }]
     }
   }
 

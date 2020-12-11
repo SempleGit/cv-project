@@ -11,7 +11,7 @@ const GeneralInputs = (props) => {
               <input type="email" placeholder='email' onChange={(e) => setEmail(e.target.value)} value={email}></input>
             </label>
             <label>Phone: 
-              <input type="tel" pattern="1?[0-9]{3}-[0-9]{3}-[0-9]{4}|\b1?[0-9]{10}$" required placeholder='555-555-5555' onChange={(e) => setPhone(e.target.value)} value={phone}></input>
+              <input type="tel" required placeholder='555-555-5555' onChange={(e) => setPhone(e.target.value)} value={phone}></input>
             </label>
             <div className="submit-div">
               <input type="submit" value="Submit" />
