@@ -11,7 +11,7 @@ html {
 }
 
 h4, p, ul, li {
-  margin: .5rem 1rem;
+  /* margin: .5rem 1rem; */
 }
 
 .employer {
@@ -55,7 +55,7 @@ h4, p, ul, li {
 .item-display {
   background-color: #F4FAFF;
   border: 4px outset gray;
-  padding: .5rem;;
+  padding: 1rem;;
 }
 
 .submit-div {
@@ -78,7 +78,7 @@ input[type=submit], button {
   background-color: #645E9D;
   color: white;
   font-size: .825rem;
-  margin: .25rem .25rem .25rem 0;
+  margin: .25rem .5rem .25rem 0;
   padding: .4rem .5rem;
   border-radius: 4px;
   border: none;
