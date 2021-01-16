@@ -36,12 +36,14 @@ const ExperienceSection = () => {
   } 
 
   const editItem = (editId) => {
-    const editRef = state.formData.find( ({id}) => id === editId);
-    setState(editRef);
+    const {employer, jobTitle, duties, startDate, endDate, id} = state.formData.find( ({id}) => id === editId);
+    setState({employer, jobTitle, duties, startDate, endDate, id, formData: state.formData});
   } 
 
   const handleChange = (e) => {
-    setState(() => ({[e.target.name]: e.target.value}))
+    const currentState = {...state};
+    currentState[e.target.name] = e.target.value;
+    setState(() => currentState)
   }
 
   const handleSubmit = (e) => {
@@ -50,9 +52,9 @@ const ExperienceSection = () => {
       let copyForm = [...formData];
       const index = formData.findIndex( data => data.id === id);
       if (index > -1) {
-        copyForm.splice(index, 1, {employer, duties, startDate, endDate, id});
+        copyForm.splice(index, 1, {employer, jobTitle, duties, startDate, endDate, id});
       } else {
-        copyForm = copyForm.concat({employer, duties, startDate, endDate, id: uniqid()});
+        copyForm = copyForm.concat({employer, jobTitle, duties, startDate, endDate, id: uniqid()});
       }
         
       return {  
